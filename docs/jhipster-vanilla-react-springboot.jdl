@@ -1,0 +1,20 @@
+application {
+  config {
+    baseName jhipsterReactPrototype
+    applicationType monolith
+    authenticationType jwt
+    packageName com.guanhaiyu.jhipsterreactprototype
+    buildTool maven
+    clientFramework react
+    nodePackageManager npm
+    databaseType sql
+    devDatabaseType h2Disk
+    prodDatabaseType postgresql
+    cacheProvider ehcache
+    enableHibernateCache true
+    enableTranslation true
+    nativeLanguage en
+    languages [en, ja]
+    testFrameworks [cypress]
+  }
+}

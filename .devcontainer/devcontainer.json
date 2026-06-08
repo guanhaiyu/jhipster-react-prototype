@@ -1,0 +1,67 @@
+{
+  "name": "JHipster React + Spring Boot",
+  "image": "mcr.microsoft.com/devcontainers/base:1-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "21",
+      "jdkDistro": "tem",
+      "installMaven": true,
+      "mavenVersion": "3.9.13",
+      "installGradle": false
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "22"
+    },
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "containerEnv": {
+    "MAVEN_USER_HOME": "/home/vscode/.m2",
+    "npm_config_cache": "/home/vscode/.npm"
+  },
+  "mounts": [
+    "source=jhipster-react-prototype-m2,target=/home/vscode/.m2,type=volume",
+    "source=jhipster-react-prototype-npm,target=/home/vscode/.npm,type=volume"
+  ],
+  "onCreateCommand": "sudo bash .devcontainer/scripts/install-tools.sh",
+  "postCreateCommand": "bash .devcontainer/scripts/post-create.sh",
+  "forwardPorts": [8080, 9000, 3001],
+  "portsAttributes": {
+    "8080": {
+      "label": "Spring Boot API",
+      "onAutoForward": "notify"
+    },
+    "9000": {
+      "label": "JHipster client dev server",
+      "onAutoForward": "notify"
+    },
+    "3001": {
+      "label": "BrowserSync UI",
+      "onAutoForward": "silent"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "vmware.vscode-spring-boot",
+        "redhat.vscode-yaml",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ms-azuretools.vscode-docker",
+        "github.vscode-github-actions",
+        "firsttris.vscode-jest-runner",
+        "humao.rest-client",
+        "jhipster-ide.jdl"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "files.eol": "\n",
+        "java.configuration.updateBuildConfiguration": "automatic",
+        "java.compile.nullAnalysis.mode": "automatic",
+        "typescript.tsdk": "node_modules/typescript/lib"
+      }
+    }
+  },
+  "remoteUser": "vscode"
+}

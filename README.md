@@ -28,6 +28,17 @@ docker --version
 gh --version
 ```
 
+If `jhipster --version` says `command not found`, run this once inside the dev container:
+
+```bash
+mkdir -p "$HOME/.local/bin"
+npm config set prefix "$HOME/.local"
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> "$HOME/.bashrc"
+export PATH="$HOME/.local/bin:$PATH"
+npm install -g generator-jhipster yo
+jhipster --version
+```
+
 ## Generate The Original JHipster App
 
 Run this inside the dev container from the repo root:

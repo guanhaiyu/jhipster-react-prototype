@@ -19,6 +19,9 @@
     "MAVEN_USER_HOME": "/home/vscode/.m2",
     "npm_config_cache": "/home/vscode/.npm"
   },
+  "remoteEnv": {
+    "PATH": "/home/vscode/.local/bin:${containerEnv:PATH}"
+  },
   "mounts": [
     "source=jhipster-react-prototype-m2,target=/home/vscode/.m2,type=volume",
     "source=jhipster-react-prototype-npm,target=/home/vscode/.npm,type=volume"
@@ -52,7 +55,8 @@
         "github.vscode-github-actions",
         "firsttris.vscode-jest-runner",
         "humao.rest-client",
-        "jhipster-ide.jdl"
+        "jhipster-ide.jdl",
+        "openai.chatgpt"
       ],
       "settings": {
         "editor.formatOnSave": true,

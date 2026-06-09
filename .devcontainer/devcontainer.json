@@ -6,11 +6,11 @@
       "version": "21",
       "jdkDistro": "tem",
       "installMaven": true,
-      "mavenVersion": "3.9.13",
+      "mavenVersion": "3.9.16",
       "installGradle": false
     },
     "ghcr.io/devcontainers/features/node:1": {
-      "version": "22"
+      "version": "24"
     },
     "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
     "ghcr.io/devcontainers/features/github-cli:1": {}
@@ -28,15 +28,23 @@
   ],
   "onCreateCommand": "sudo bash .devcontainer/scripts/install-tools.sh",
   "postCreateCommand": "bash .devcontainer/scripts/post-create.sh",
-  "forwardPorts": [8080, 9000, 3001],
+  "forwardPorts": [8080, 8000, 9000, 9060, 3001],
   "portsAttributes": {
     "8080": {
       "label": "Spring Boot API",
       "onAutoForward": "notify"
     },
+    "8000": {
+      "label": "Spring Boot Debug",
+      "onAutoForward": "silent"
+    },
     "9000": {
       "label": "JHipster client dev server",
       "onAutoForward": "notify"
+    },
+    "9060": {
+      "label": "Webpack dev middleware",
+      "onAutoForward": "silent"
     },
     "3001": {
       "label": "BrowserSync UI",

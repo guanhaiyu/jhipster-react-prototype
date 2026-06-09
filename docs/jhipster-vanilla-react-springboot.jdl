@@ -6,15 +6,14 @@ application {
     packageName com.guanhaiyu.jhipsterreactprototype
     buildTool maven
     clientFramework react
+    clientBundler webpack
     nodePackageManager npm
     databaseType sql
     devDatabaseType h2Disk
     prodDatabaseType postgresql
     cacheProvider ehcache
     enableHibernateCache true
-    enableTranslation true
+    enableTranslation false
     nativeLanguage en
-    languages [en, ja]
-    testFrameworks [cypress]
   }
 }

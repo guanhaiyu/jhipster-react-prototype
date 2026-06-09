@@ -1,0 +1,15 @@
+{
+  "generator-jhipster": {
+    "baseName": "jhipsterReactPrototype",
+    "clientBundler": "webpack",
+    "clientFramework": "react",
+    "creationTimestamp": 1780908742085,
+    "defaultCommand": "app",
+    "enableTranslation": false,
+    "entities": [],
+    "jhipsterVersion": "9.1.0",
+    "jwtSecretKey": "YTEzNmM4OWQ1NDJhMWQ0ZmVmNWQ3YzA4YzIwNzhiOTRjNzc1Y2RjOTc0YjU4NjU4MDI1MDY1YTZiZjBhNzE2ZTg3NjBiMzUzYjZjZjE1OTg3MzBmY2FlMGEzNjJmMWU2YmFlMzI3MThhYzY2YjkwMjc3NWQ4MGIwZDU3NGE5ZTE=",
+    "nativeLanguage": "en",
+    "packageName": "com.guanhaiyu.jhipsterreactprototype"
+  }
+}

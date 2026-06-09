@@ -12,7 +12,7 @@ fi
 
 export PATH="${NPM_GLOBAL_PREFIX}/bin:${PATH}"
 
-npm install -g generator-jhipster yo
+npm install -g generator-jhipster@9.1.0 yo
 
 echo
 echo "JHipster dev container is ready."

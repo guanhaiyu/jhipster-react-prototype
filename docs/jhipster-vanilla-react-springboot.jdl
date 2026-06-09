@@ -9,7 +9,7 @@ application {
     clientBundler webpack
     nodePackageManager npm
     databaseType sql
-    devDatabaseType h2Disk
+    devDatabaseType postgresql
     prodDatabaseType postgresql
     cacheProvider ehcache
     enableHibernateCache true

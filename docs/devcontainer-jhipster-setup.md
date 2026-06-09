@@ -39,9 +39,12 @@ Inside the dev container:
 
 ```bash
 ./npmw install
+docker compose -f src/main/docker/postgresql.yml up -d --wait
 ./npmw run backend:start
 ./npmw run start
 ```
+
+The dev container uses the host Docker engine. Its `SPRING_DATASOURCE_URL` points to `host.docker.internal` so the Spring Boot process can reach the host-published PostgreSQL port.
 
 Open the app at:
 
